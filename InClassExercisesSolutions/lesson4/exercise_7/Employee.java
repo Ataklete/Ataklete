@@ -1,0 +1,33 @@
+package lesson4.exercise_7;
+
+public class Employee {
+	private String name;
+	private int salary;
+	public Employee(String name, int sal) {
+		this.name = name;
+		this.salary = sal;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getSalary() {
+		return salary;
+	}
+	
+	@Override
+	public String toString() {
+		return name + ": " + salary;
+	}
+	
+	@Override
+	public boolean equals(Object emp) {
+		if(emp == null) return false;
+		if(emp.getClass() != getClass()) return false;
+		Employee e = (Employee)emp;
+		return name.equals(e.name) && salary == e.salary; 
+	}
+}
+
+
+
+
